@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Side-by-side Comparison Amplifies Dialect Bias in Language Models">
+    <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Side-by-side Comparison Amplifies Dialect Bias in Language Models</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script> -->
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./static/images/mario.png">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+    </nav>
+
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">Side-by-side Comparison Amplifies Dialect Bias in Language Models</h1>
+                        <div class="is-size-4 publication-authors">
+                            <span class="author-block">
+              <a href="https://www.linkedin.com/in/kritee-kondapally-41b86218b">Kritee Kondapally</a><sup>1</sup>,</span>
+                            <span class="author-block">
+              <a href="https://www.linkedin.com/in/claire-smerdon/">Claire J. Smerdon</a><sup>1</sup>,
+            </span>
+                            <span class="author-block">
+              <a href="">Pooja Chetan Patel</a><sup>1</sup>,
+            </span>
+                            <span class="author-block">
+              <a href="">Ogheneyoma Akoni</a><sup>1</sup>,
+            </span>
+                            <span class="author-block">
+              <a href="">Jevon Torres</a><sup>1</sup>,
+            </span>
+                            <span class="author-block">
+              <a href="https://jr4fs.github.io/">Jaspreet Ranjit</a><sup>1</sup>,
+            </span>
+                            <span class="author-block">
+                <a href="">Matthew Finnlayson</a><sup>1</sup>,
+            </span>
+                            <span class="author-block">
+              <a href="https://swabhs.com/">Swabha Swayampdipta</a><sup>1</sup>
+            </span>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block"><sup>1</sup>&nbsp;<img style="max-width: 215px; height: auto;" src="./static/images/engineering.png"/></span> &nbsp; &nbsp; &nbsp;
+                        </div>
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- PDF Link. -->
+                                <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                                <span>Paper</span>
+                                </a>
+                                </span>
+                                <span class="link-block">
+                <a href="https://github.com/kriteek/dialect_bias_llms"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                                <span>Code</span>
+                                </a>
+                                </span>
+                                <!-- Dataset Link. -->
+                                <span class="link-block">
+              <a href="https://slanglab.cs.umass.edu/TwitterAAE/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                                <span>Dataset</span>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <!-- Abstract. -->
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <!-- <h2 class="title is-3">Snapshot of</span> <span style="font-size:30px; font-family:Garmond; color: #000000;"><b><tt>OATH-Frames</tt></b></span></h2> -->
+                    <div class="content has-text-justified">
+                        Warning: This paper includes examples of offensive stereotypes based on dialect. In this work, we quantify covert dialect bias in online discourse by evaluating how LMs associate stereotypical traits (derived from social psychology research on racial
+                        bias) with intent-equivalent tweets in Standard American English (SAE) and African-American Vernacular English (AAVE). While prior work shows that LMs associate more negative stereotypes with AAVE when evaluating tweets in isolation,
+                        we are surprised to find that this bias is significantly exacerbated when SAE / AAVE tweet pairs are compared side-by-side, a setting that more closely reflects high-impact decision making contexts in which models are used to rank
+                        candidates. The bias only worsens when dialect labels are explicitly specified. Encouragingly, we show that counterfactual fairness finetuning can mitigate covert dialect bias for some stereotypical traits, reducing average disparities
+                        when evaluating tweets in isolation, however, these improvements do not consistently hold across traits when evaluating SAE / AAVE tweets side-by-side. Our findings show that existing evaluation settings for covert dialect bias
+                        may underestimate its severity, and our contrastive evaluation exposes amplified bias in certain settings.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="hero teaser">
+        <div class="container is-max-desktop">
+            <div class="hero-body">
+                <img src="./static/images/pitch.png" alt="pitch">
+                <figcaption> : Evaluation (top) and mitigating (bottom) covert dialect bias in language models. Top: We evaluate covert dialect bias by prompting language models to rate intent-equivalent SAE and AAVE tweet pairs on 12 traits (Likert 1–5). Using matched-guise
+                    probing, models are evaluated under two conditions: absolute prompting, where each tweet is rated independently, and contrastive prompting, where SAE and AAVE tweets are rated side-by-side. We find that bias is significantly exacerbated
+                    in the contrastive setting, and in some cases, worsens when explicit dialect labels are present. Bottom: We apply counterfactual fairness fine-tuning, training the model to assign identical trait scores to SAE/AAVE tweet pairs. We
+                    find this is effective in reducing effect sizes (e.g., bias towards AAVE) for a few traits, specifically: Determination, Sophistication, Rudeness, and Aggression. </figcaption>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+            <h2 class="title">BibTeX</h2>
+            <pre><code>
+    @misc{kondapally2026dialectbias,
+      title={Side-by-side Comparison Amplifies Dialect Bias in Language}, 
+      author={Kritee Kondapally and Claire J. Smerdon and Pooja Chetan Patel and Ogheneyoma Akoni and Jevon Torres and Jaspreet Ranjit and Matthew Finnlayson and Swabha Swayamdipta},
+      year={2026},
+      eprint={},
+      archivePrefix={},
+      primaryClass={},
+      url={}, 
+    }
+</code></pre>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+                        <p>
+                            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+                        </p>
+                        <p>
+                            This means you are free to borrow the <a href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website, we just ask that you link back to this page in the footer. Please remember to remove the analytics
+                            code included in the header of the website which you do not want on your website.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
