@@ -48,6 +48,7 @@ Note: Please follow the original dataset’s terms of use and citation requireme
 - Matplotlib is configured to use LaTeX + Libertinus (`plot_utils.configure_matplotlib`). Ensure the fonts/LaTeX package are available in your environment if you see font warnings.
 
 ## Citation
+```bibtex
 @inproceedings{kondapally2026dialectbias,
   title={Side-by-side Comparison Amplifies Dialect Bias in Language Models},
   author={Kondapally, Kritee and Smerdon, Claire J. and Patel, Pooja C. and Akoni, Ogheneyoma and Torres, Jevon and Ranjit, Jaspreet and Finlayson, Matthew and Swayamdipta, Swabha},
@@ -58,3 +59,4 @@ Note: Please follow the original dataset’s terms of use and citation requireme
   address={New York, NY, USA},
   doi={10.1145/3805689.3812217}
 }
+```
